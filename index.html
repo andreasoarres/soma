@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cont_Valoles</title>
+    
+    <style>
+        body{
+            background-color: antiquewhite;
+            font:normal 20pt arial; /*tamanho e modelo letra*/
+            text-align: center;    /*centraliza o conteudo*/
+        }
+        input{
+            font: normal 20pt arial; /*letra do botão*/
+            width: 100px;
+            border-radius: 5px;    
+        }
+        div#conteiner {
+            background-color: aquamarine;
+            width: 100%;
+            margin-top: 200 px;
+            border-radius:5px;
+        }
+        div#res{
+            margin-top: 28px;/*espaçamento da dive do conteudo*/
+        } 
+         
+    </style>
+</head>
+
+<body>
+    <div id="conteiner">
+    <h1>Contador de Valores</h1>
+    <input type="number" name="txt1" id="txtn1"><!--digite um valor-->
+    <input type="number" name="txtn2" id="txtn2"><!--digite outro valor-->
+    <input type="button" value="somar" onclick="somar()"><!--clicar p/ pedir o resultado da soma dos valores -->
+    <div id="res">Resultado dos Valores</div><!--div mostra o resultado na tela após a clic-->
+    </div>
+    <script>
+        function somar(){
+            var tn1 = document.getElementById('txtn1')//armazenou um elemento
+            var tn2 = document.getElementById('txtn2')//armazenou outro elemento
+            var res = document.getElementById('res')//armazenou o resultado
+            var n1 = Number(tn1.value)//valor do elemento
+            var n2 = Number(tn2.value)//valor do outro elemento
+            var s = n1 + n2//somando os dois elementos
+            res.innerHTML = `O resultado de ${n1} + ${n2} = ${s}`//resto que mostra o resultado dos dois elementos
+        }
+    </script>
+</body>
+</html>
